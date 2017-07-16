@@ -1,0 +1,44 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<GridPane fx:controller="sample.Controller"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10"
+            stylesheets="/sample/sample.css">
+
+        <Text id="welcome-text" text="Welcome. Enter values to generate a new password."
+               GridPane.columnIndex="0" GridPane.rowIndex="0"
+               GridPane.columnSpan="2"/>
+
+        <Label text="Desired length of password (Max 12):"
+           GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <TextField fx:id="lengthField"
+            GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+        <Label text="Number of special characters:"
+           GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <TextField fx:id="specialCharField"
+                       GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+        <Label text="How many numbers in password:"
+           GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+        <TextField fx:id="numberField"
+               GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+        <HBox spacing="10" alignment="bottom_right"
+             GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <Button text="Create New Password"
+                onAction="#handleCreateButtonAction"/>
+        </HBox>
+
+         <Label text="New Password: "
+                GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+        <TextField fx:id="resultPW"
+                GridPane.columnIndex="1" GridPane.rowIndex="5"
+                />
+
+</GridPane>
